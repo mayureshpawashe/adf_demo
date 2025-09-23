@@ -1,0 +1,9 @@
+{
+	"name": "demoadfmayur",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6f98da56-1eda-4ef8-9952-e189e5abaf02",
+		"tenantId": "68456146-73e9-4135-bcc1-0f5efa1c1b25"
+	}
+}
