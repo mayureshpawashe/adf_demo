@@ -1,0 +1,279 @@
+{
+	"name": "sinkgit",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "destination"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "match_id",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "match_type",
+				"type": "String"
+			},
+			{
+				"name": "event_name",
+				"type": "String"
+			},
+			{
+				"name": "innings",
+				"type": "String"
+			},
+			{
+				"name": "batting_team",
+				"type": "String"
+			},
+			{
+				"name": "bowling_team",
+				"type": "String"
+			},
+			{
+				"name": "over",
+				"type": "String"
+			},
+			{
+				"name": "ball",
+				"type": "String"
+			},
+			{
+				"name": "ball_no",
+				"type": "String"
+			},
+			{
+				"name": "batter",
+				"type": "String"
+			},
+			{
+				"name": "bat_pos",
+				"type": "String"
+			},
+			{
+				"name": "runs_batter",
+				"type": "String"
+			},
+			{
+				"name": "balls_faced",
+				"type": "String"
+			},
+			{
+				"name": "bowler",
+				"type": "String"
+			},
+			{
+				"name": "valid_ball",
+				"type": "String"
+			},
+			{
+				"name": "runs_extras",
+				"type": "String"
+			},
+			{
+				"name": "runs_total",
+				"type": "String"
+			},
+			{
+				"name": "runs_bowler",
+				"type": "String"
+			},
+			{
+				"name": "runs_not_boundary",
+				"type": "String"
+			},
+			{
+				"name": "extra_type",
+				"type": "String"
+			},
+			{
+				"name": "non_striker",
+				"type": "String"
+			},
+			{
+				"name": "non_striker_pos",
+				"type": "String"
+			},
+			{
+				"name": "wicket_kind",
+				"type": "String"
+			},
+			{
+				"name": "player_out",
+				"type": "String"
+			},
+			{
+				"name": "fielders",
+				"type": "String"
+			},
+			{
+				"name": "runs_target",
+				"type": "String"
+			},
+			{
+				"name": "review_batter",
+				"type": "String"
+			},
+			{
+				"name": "team_reviewed",
+				"type": "String"
+			},
+			{
+				"name": "review_decision",
+				"type": "String"
+			},
+			{
+				"name": "umpire",
+				"type": "String"
+			},
+			{
+				"name": "umpires_call",
+				"type": "String"
+			},
+			{
+				"name": "player_of_match",
+				"type": "String"
+			},
+			{
+				"name": "match_won_by",
+				"type": "String"
+			},
+			{
+				"name": "win_outcome",
+				"type": "String"
+			},
+			{
+				"name": "toss_winner",
+				"type": "String"
+			},
+			{
+				"name": "toss_decision",
+				"type": "String"
+			},
+			{
+				"name": "venue",
+				"type": "String"
+			},
+			{
+				"name": "city",
+				"type": "String"
+			},
+			{
+				"name": "day",
+				"type": "String"
+			},
+			{
+				"name": "month",
+				"type": "String"
+			},
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "season",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "team_type",
+				"type": "String"
+			},
+			{
+				"name": "superover_winner",
+				"type": "String"
+			},
+			{
+				"name": "result_type",
+				"type": "String"
+			},
+			{
+				"name": "method",
+				"type": "String"
+			},
+			{
+				"name": "balls_per_over",
+				"type": "String"
+			},
+			{
+				"name": "overs",
+				"type": "String"
+			},
+			{
+				"name": "event_match_no",
+				"type": "String"
+			},
+			{
+				"name": "stage",
+				"type": "String"
+			},
+			{
+				"name": "match_number",
+				"type": "String"
+			},
+			{
+				"name": "team_runs",
+				"type": "String"
+			},
+			{
+				"name": "team_balls",
+				"type": "String"
+			},
+			{
+				"name": "team_wicket",
+				"type": "String"
+			},
+			{
+				"name": "new_batter",
+				"type": "String"
+			},
+			{
+				"name": "batter_runs",
+				"type": "String"
+			},
+			{
+				"name": "batter_balls",
+				"type": "String"
+			},
+			{
+				"name": "bowler_wicket",
+				"type": "String"
+			},
+			{
+				"name": "batting_partners",
+				"type": "String"
+			},
+			{
+				"name": "next_batter",
+				"type": "String"
+			},
+			{
+				"name": "striker_out",
+				"type": "String"
+			}
+		]
+	}
+}
