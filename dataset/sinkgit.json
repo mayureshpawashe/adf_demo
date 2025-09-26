@@ -10,6 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "amazon_product_details.csv",
+				"folderPath": "copy_git",
 				"fileSystem": "destination"
 			},
 			"columnDelimiter": ",",
