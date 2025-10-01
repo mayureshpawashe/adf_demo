@@ -12,13 +12,24 @@
 					"name": "sourceCSV"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "sinktransform",
+						"type": "DatasetReference"
+					},
+					"name": "sinktransform"
+				}
+			],
 			"transformations": [
 				{
 					"name": "select1"
 				},
 				{
 					"name": "split1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -64,7 +75,15 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
 				"select1 split(rating == '4.5',",
-				"     disjoint: false) ~> split1@(rating, others)"
+				"     disjoint: false) ~> split1@(rating, others)",
+				"split1@rating derive(rating = iif(rating == '4.5', '5', rating)) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinktransform"
 			]
 		}
 	}
