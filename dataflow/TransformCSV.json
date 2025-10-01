@@ -1,0 +1,71 @@
+{
+	"name": "TransformCSV",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "dataflowcsv",
+						"type": "DatasetReference"
+					},
+					"name": "sourceCSV"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "split1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          product_id as string,",
+				"          product_name as string,",
+				"          category as string,",
+				"          discounted_price as string,",
+				"          actual_price as string,",
+				"          discount_percentage as string,",
+				"          rating as string,",
+				"          rating_count as string,",
+				"          about_product as string,",
+				"          user_id as string,",
+				"          user_name as string,",
+				"          review_id as string,",
+				"          review_title as string,",
+				"          review_content as string,",
+				"          img_link as string,",
+				"          product_link as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourceCSV",
+				"sourceCSV select(mapColumn(",
+				"          product_id,",
+				"          product_name,",
+				"          category,",
+				"          discounted_price,",
+				"          actual_price,",
+				"          discount_percentage,",
+				"          rating,",
+				"          rating_count,",
+				"          about_product,",
+				"          user_id,",
+				"          user_name,",
+				"          review_id,",
+				"          review_title,",
+				"          review_content,",
+				"          img_link,",
+				"          product_link",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 split(rating == '4.5',",
+				"     disjoint: false) ~> split1@(rating, others)"
+			]
+		}
+	}
+}
